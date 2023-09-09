@@ -25,6 +25,10 @@ resource "null_resource" "zip_payload" {
   }
 }
 
+provider "aws" {
+  region = "us-west-2" # Replace with your desired AWS region
+}
+
 resource "aws_lambda_function" "tf_python_lambda" {
   filename         = local.lambda_zip_path
   function_name    = "my_lambda_test"
