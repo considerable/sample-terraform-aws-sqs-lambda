@@ -1,9 +1,9 @@
-# terraform-aws
+# sample-terraform-aws-lambda
 ### AWS Lambda Deployment with Terraform
 
 This repository contains code and configuration files for deploying an AWS Lambda function using Terraform. Below, you'll find an overview of the updated repository structure and deployment instructions.
 
-[![sequence_diagram.mmd](https://mermaid.ink/img/pako:eNptkU1qwzAQha8itE4uoEWgpC0UXNrUhWwMZipNbZFIdqVRaQi5e0dWTMGNVvPzPumN5iz1YFAqGfErodd4b6EL4Bov-IwQyGo7gidxt6_bbfUkIIpGciI4aeR_XQXuw0D7mLwmO_iifz1Rz3Hpibl3C693dUFysEuY8JZqexyS2QPpvq2GLhbiryhyMXOFvFpfbzZ8qRI1ejO984wxQodFxIU1Kxb2lXgPtuswzN4fflCnyfxELeR8wcKayl5m-CXRmKiQC11---pTiTekYPEbyxxerqTD4MAaXtQ5442kHh1_jeLQQDjkYS-sg0RDffJaKgoJVzKNBmheqlSfcIx4-QWSXaiD?type=png)](https://mermaid-js.github.io/mermaid-live-editor/edit#pako:eNptkU1qwzAQha8itE4uoEWgpC0UXNrUhWwMZipNbZFIdqVRaQi5e0dWTMGNVvPzPumN5iz1YFAqGfErodd4b6EL4Bov-IwQyGo7gidxt6_bbfUkIIpGciI4aeR_XQXuw0D7mLwmO_iifz1Rz3Hpibl3C693dUFysEuY8JZqexyS2QPpvq2GLhbiryhyMXOFvFpfbzZ8qRI1ejO984wxQodFxIU1Kxb2lXgPtuswzN4fflCnyfxELeR8wcKayl5m-CXRmKiQC11---pTiTekYPEbyxxerqTD4MAaXtQ5442kHh1_jeLQQDjkYS-sg0RDffJaKgoJVzKNBmheqlSfcIx4-QWSXaiD)
+[![](https://mermaid.ink/img/pako:eNptkdFqwzAMRX_F-Ln9AT8URrfBIGPrUuhLIGi2lhgaJ3OkslL675PjhkFWP8nX90jX9kXb3qE2esRvxmDx0UMToauCkjVAJG_9AIHUw6Gst8WLglFVWjZKNpX-7yug-3RQP3Ow5PuQ_e9naqXOZ2o-u4eXuzIjqdgxMt5zbY89uwOQbeuib8ZM_IkqiYnL5C36erORpkaVGNw05xXHERrMJhHW4ljEN2offdNgnLM__aDlKfxELezSYBHNpCwz_MY0MGVy4UuzbzmN-kCKHk-Y7xH0SncYO_BOPuqS8EpTi508jZHS4RfwkdJ9r2IFpr48B6sNRcaV5sEBzf-axesv7cOpew?type=png)](https://mermaid-js.github.io/mermaid-live-editor/edit#pako:eNptkdFqwzAMRX_F-Ln9AT8URrfBIGPrUuhLIGi2lhgaJ3OkslL675PjhkFWP8nX90jX9kXb3qE2esRvxmDx0UMToauCkjVAJG_9AIHUw6Gst8WLglFVWjZKNpX-7yug-3RQP3Ow5PuQ_e9naqXOZ2o-u4eXuzIjqdgxMt5zbY89uwOQbeuib8ZM_IkqiYnL5C36erORpkaVGNw05xXHERrMJhHW4ljEN2offdNgnLM__aDlKfxELezSYBHNpCwz_MY0MGVy4UuzbzmN-kCKHk-Y7xH0SncYO_BOPuqS8EpTi508jZHS4RfwkdJ9r2IFpr48B6sNRcaV5sEBzf-axesv7cOpew)
 
 The diagram above illustrates the flow of AWS CLI commands that trigger a Python Lambda function using an SQS message and how the Lambda function's output can be found in the logs of a particular log group.
 
@@ -12,7 +12,7 @@ The diagram above illustrates the flow of AWS CLI commands that trigger a Python
 ## Repository Structure
 
 ```
-/terraform-aws
+/sample-terraform-aws-lambda
 ├── README.md             # This README file.
 ├── Makefile              # Makefile for AWS Lambda and Terraform operations and cleanup.
 ├── payload.py            # Python code for the AWS Lambda function.
@@ -30,8 +30,8 @@ To deploy the AWS Lambda function and associated resources, follow these steps:
 2. Clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/considerable/terraform-aws.git
-   cd terraform-aws
+   git clone https://github.com/considerable/sample-terraform-aws-lambda.git
+   cd sample-terraform-aws-lambda
    ```
 
 3. Initialize Terraform and apply the configuration using the Makefile:
@@ -95,4 +95,5 @@ For more detailed instructions and a deeper understanding of this sort of Terraf
 
 [Creating a Dev Environment in AWS with Terraform](https://www.linkedin.com/learning/creating-a-dev-environment-in-aws-with-terraform/course-overview?autoSkip=true&resume=false)
 
-This course provides comprehensive training on setting up a development environment in AWS using Terraform, making it an excellent resource to complement this repository.
+This course provides comprehensive training on setting up a development environment in AWS using Terraform.
+

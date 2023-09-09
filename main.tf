@@ -29,7 +29,7 @@ provider "aws" {
   region = "us-west-2" # Replace with your desired AWS region
 }
 
-resource "aws_lambda_function" "tf_python_lambda" {
+resource "aws_lambda_function" "my_python_lambda" {
   filename         = local.lambda_zip_path
   function_name    = "my_lambda_test"
   role             = aws_iam_role.my_python_lambda_role.arn
@@ -70,7 +70,7 @@ resource "aws_sqs_queue" "dead_letter_queue" {
 
 resource "aws_lambda_event_source_mapping" "main_queue_sqs_lambda_trigger" {
   event_source_arn = aws_sqs_queue.main_queue.arn
-  function_name    = aws_lambda_function.tf_python_lambda.arn
+  function_name    = aws_lambda_function.my_python_lambda.arn
   depends_on       = [aws_sqs_queue.main_queue, aws_sqs_queue.dead_letter_queue]
 }
 
