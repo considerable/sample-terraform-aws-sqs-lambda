@@ -1,10 +1,11 @@
 sequenceDiagram
-    participant AWS_CLI as "AWS CLI"
-    participant Lambda_Function as "Python Lambda Function"
-    participant SQS as "SQS Queue"
-    participant CloudWatch_Logs as "CloudWatch Logs"
+    participant AWS_CLI as AWS CLI
+    participant Lambda_Function as Python Lambda Function
+    participant SQS as SQS Queue
+    participant CloudWatch_Logs as CloudWatch Logs
 
     AWS_CLI->>SQS: Send SQS Message
     SQS-->>Lambda_Function: Trigger Lambda Execution
     Lambda_Function->>CloudWatch_Logs: Log Lambda Output
     CloudWatch_Logs-->>AWS_CLI: Retrieve Logs
+
